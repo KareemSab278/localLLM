@@ -1,8 +1,8 @@
 import Button from "@mui/material/Button";
-
-export default function ContainedButtons(isDisabled = true, onClick, label) {
+export { ButtonComponent };
+const ButtonComponent = ({ isDisabled = true, onClick, label, style }) => {
   return (
-    <Button variant="contained" disabled={isDisabled} onClick={onClick}>
+    <Button variant="contained" disabled={isDisabled} onClick={onClick} style={style}>
       {label}
     </Button>
   );
