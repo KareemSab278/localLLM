@@ -5,29 +5,16 @@ import { useState, useEffect } from "react";
 import { ChatBubbleComponent } from "./components/ChatBubbleComponent";
 
 const bodyStyle = { width: "90%", margin: "0 auto" };
-const messages = [
-  {
-    text: "Hello, how can I assist you today?",
-    isJarvisJr: true,
-  },
-  {
-    text: "Hi Jarvis Jr! Can you tell me a joke?",
-    isJarvisJr: false,
-  },
-  {
-    text: "Sure! Why did the scarecrow win an award? Because he was outstanding in his field!",
-    isJarvisJr: true,
-  },
-];
+
 function App() {
-  const [chatMessages, setChatMessages] = useState(messages);
+  const [chatEntries, setChatEntries] = useState([]);
   return (
     <section style={bodyStyle}>
-      {messages.length > 0 &&
-        chatMessages.map((msg, index) => (
+      {chatEntries.length > 0 &&
+        chatEntries.map((msg, index) => (
           <ChatBubbleComponent
             key={index}
-            message={msg.text}
+            message={msg?.text}
             isJarvisJr={msg?.isJarvisJr || false}
           />
         ))}

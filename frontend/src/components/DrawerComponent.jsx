@@ -7,7 +7,7 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import MenuTwoToneIcon from "@mui/icons-material/MenuTwoTone";
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import { drawerTheme } from "../Theme";
 export { DrawerComponent };
 
@@ -54,7 +54,7 @@ const DrawerComponent = ({ options = [] }) => {
   return (
     <div style={drawerStyle}>
       <Button onClick={toggleDrawer(true)} variant="filled">
-        <MenuTwoToneIcon sx={burgerSize.xl} />
+        <MenuRoundedIcon sx={burgerSize.xl} />
       </Button>
       <Drawer open={open} onClose={toggleDrawer(false)} slotProps={drawerTheme}>
         {DrawerList}
