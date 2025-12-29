@@ -7,7 +7,7 @@ import {
   inputFieldStyle,
   submitButtonStyle,
   inputFieldContainerStyle,
-} from "../Theme";
+} from "../ThemeAndStyle";
 import { useDispatch } from "react-redux";
 import { pushMessage } from "../storage/chatSlice";
 import {saveChatToLS} from "../storage/LS";

@@ -1,5 +1,5 @@
 import { Box, Paper, Typography } from "@mui/material";
-import { chatBubbleTheme, boxStyle } from "../Theme";
+import { chatBubbleTheme, boxStyle } from "../ThemeAndStyle";
 export { ChatBubbleComponent };
 
 const ChatBubbleComponent = ({ message, isJarvisJr = false, timestamp }) => {

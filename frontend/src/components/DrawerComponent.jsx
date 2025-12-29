@@ -8,7 +8,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
-import { drawerTheme, burgerSize, drawerStyle } from "../Theme";
+import { drawerTheme, burgerSize, drawerStyle } from "../ThemeAndStyle";
 import { loadChatFromLS, getAllChatsFromLS, saveChatToLS } from "../storage/LS";
 import { setCurrentChatName } from "../storage/currentChatSlice";
 import { useDispatch, useSelector } from "react-redux";
