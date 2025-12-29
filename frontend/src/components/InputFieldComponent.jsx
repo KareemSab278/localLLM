@@ -7,7 +7,7 @@ import { inputFieldStyle, submitButtonStyle, inputFieldContainerStyle } from "..
 export { InputField };
 
 const handleSubmit = (input) => {
-  alert(`Submitted: ${input.target.value}`);
+  console.log(`Submitted: ${input}`);
 };
 
 const InputField = () => {
@@ -26,7 +26,7 @@ const InputField = () => {
         onChange={(input) => setInputValue(input.target.value)}
         onKeyDown={(input) => {
           if (input.key === "Enter" && input.ctrlKey) {
-            handleSubmit(input);
+            handleSubmit(inputValue);
             setInputValue("");
           }
         }}
@@ -37,8 +37,8 @@ const InputField = () => {
         style={submitButtonStyle}
         isDisabled={inputValue.trim() === ""}
         label={<KeyboardArrowUpRoundedIcon />}
-        onClick={(input) => {
-          handleSubmit(input);
+        onClick={() => {
+          handleSubmit(inputValue);
           setInputValue("");
         }}
       />

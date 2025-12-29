@@ -5,9 +5,10 @@ import { MantineProvider } from "@mantine/core";
 import { Theme } from "./Theme";
 import { DrawerComponent } from "./components/drawerComponent";
 
+
 createRoot(document.getElementById("root")).render(
   <MantineProvider>
-    <DrawerComponent />
+    <DrawerComponent options={[]} />
     <style>{Theme}</style>
     <StrictMode>
       <App />

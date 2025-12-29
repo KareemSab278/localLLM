@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
@@ -7,7 +7,7 @@ import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { drawerTheme } from "../Theme";
 export { DrawerComponent };
 
@@ -28,13 +28,15 @@ const DrawerComponent = ({ options = [] }) => {
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-  
-  options.unshift({
-    text: "New Chat",
-    action: () => {
-      alert("New Chat clicked");
-    },
-  });
+
+  useEffect(() => {
+    options.unshift({
+      text: "New Chat",
+      action: () => {
+        alert("New Chat clicked");
+      },
+    });
+  }, []);
 
   const DrawerList = (
     <Box sx={drawerStyle} onClick={toggleDrawer(false)}>
