@@ -1,3 +1,9 @@
 i plan to have this run inside vscode locally instead of paying money for copilot. its useless anyway locally
 
 also i need a smaller model to run and maybe i can make it more efficient. anyway i need to go destroy my legs in the gym
+
+curl -X POST http://localhost:8000/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "Say hello world in Python", "model": null}'
+
+cant use my pc right now because my hdmi cable is taken for tv lol

@@ -1,4 +1,5 @@
 import requests
+# this file is not in use anymore but keeping it for reference
 
 question = input("Input Query: ").strip()
 while not question:
