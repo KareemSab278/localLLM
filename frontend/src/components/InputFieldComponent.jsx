@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import { ButtonComponent } from "./ButtonComponent";
+import { useSendPrompt } from "../apiComms/sendPrompt";
 import {
   inputFieldStyle,
   submitButtonStyle,
@@ -15,9 +16,10 @@ export { InputField };
 const InputField = () => {
   const [inputValue, setInputValue] = useState("");
   const dispatch = useDispatch();
+  const sendPrompt = useSendPrompt();
 
   const handleSubmit = (input) => {
-    if (input.trim().length === 0) return; // dont even think of sending an empty mssg to Jarvis Jr
+    if (input.trim().length === 0) return; // dont even think of sending an empty mssg to my boi Jarvis Jr
     dispatch(
       pushMessage({
         isJarvisJr: false,
@@ -25,6 +27,7 @@ const InputField = () => {
         ts: Date.now(),
       })
     );
+    sendPrompt(input)
   };
 
   return (
