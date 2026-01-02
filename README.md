@@ -71,6 +71,12 @@ A small personal project: a local frontend UI that talks to a tiny backend which
 - Frontend dev: `npm run dev` (see [frontend/package.json](frontend/package.json))
 - Backend dev: `python -m uvicorn api:api --reload` (run from `backend/`)
 
+## Future Improvements
+
+- I still have yet to send the entire chat (or part of the chat) to the LLM, so right now it basically just gets the latest message which isn't entirely useful.
+- Was thinking of adding caching and finding a model that's less GPU intensive. The 3b model abuses my poor GPU.
+- I'm thinking of also saving the chat into a db (most likely no-SQL) instead of LS.
+
 ---
 
 This is a personal holiday project intended for local experimentation. Feel free to fork, star, and criticize.
